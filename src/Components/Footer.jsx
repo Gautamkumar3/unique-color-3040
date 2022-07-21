@@ -12,7 +12,7 @@ import {
 
 export default function Footer() {
     return (
-        <Box h="500px" w="85%" margin="auto" p="10px" marginTop={14} borderRadius="10px">
+        <Box h="500px" w="85%" margin="auto" p="10px" marginTop={14} borderRadius="10px" marginBottom={10}>
             <Flex>
                 <Box>
                     <Image src='https://www.netmeds.com/assets/gloryweb/images/netmeds-footer-logo.svg' alt='logo' />

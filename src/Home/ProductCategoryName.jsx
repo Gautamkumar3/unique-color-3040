@@ -19,9 +19,7 @@ const Details = [
     {
         title: "Homeopathy"
     },
-    {
-        title: "Covid Essentials"
-    },
+
     {
         title: "Fitness"
     },

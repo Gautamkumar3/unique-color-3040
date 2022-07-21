@@ -5,18 +5,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter } from "react-router-dom"
+import AuthContextProvider from './Authenticate/AuthContext';
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
-  <StrictMode>
-    <ColorModeScript />
-    <ChakraProvider>
-      <App />
-    </ChakraProvider>
 
-  </StrictMode>
+  <BrowserRouter>
+    <AuthContextProvider>
+      <ChakraProvider>
+        <App />
+      </ChakraProvider>
+    </AuthContextProvider>
+  </BrowserRouter>
+
 );
 
 // If you want your app to work offline and load faster, you can change
