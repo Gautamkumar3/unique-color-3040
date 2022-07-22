@@ -64,10 +64,11 @@ export default function Signin() {
                         </Flex>
                     </HStack>
                 </Box>
+
             </Flex >
             <VStack marginTop={10}>
                 <Text>By continuing you agree to our <span style={{ color: "#ef4281" }}>Terms of service</span> </Text>
-                <Text>and <span style={{ color: "#ef4281" }}>Privacy & Legal Policy.</span> </Text>
+                <Text>and <span style={{ color: "#ef4280" }}>Privacy & Legal Policy.</span> </Text>
             </VStack>
         </Box >
     )
