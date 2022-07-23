@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { createContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import { useEffect } from 'react';
 
@@ -88,17 +88,22 @@ const AuthContextProvider = ({ children }) => {
                     data.map((item) => {
                         if (item.mob === res.data.mob) {
                             flag = true;
+                            return;
                         }
                     })
                     if (flag === false) {
                         setMobile(res.data.mob)
                         setState({ ...state, isAuth: true })
-                        navigate("/signup")
+                        setTimeout(() => {
+                            navigate("/signup")
+                        }, 1000)
+
 
                     } else {
                         setMobile(res.data.mob)
                         setState({ ...state, isAuth: true })
                         navigate("/signin")
+
                     }
                 }
 
@@ -117,9 +122,19 @@ const AuthContextProvider = ({ children }) => {
 
     }
 
+    // ############### Cart function manage ################# 
+
+    const addToCart = (item) => {
+        axios.post("https://netmeds-new-api.herokuapp.com/cart", item).then((res) => {
+            // console.log(res)
+        }).then((er) => {
+            console.log(er)
+        })
+    }
+
 
     return (
-        <AuthContext.Provider value={{ pin, handlePin, verifyOtp, handleInput, handleInputMobile, handleOtp, mobile, name, state, handleLogin, handleLogout }}>
+        <AuthContext.Provider value={{ pin, handlePin, verifyOtp, handleInput, handleInputMobile, handleOtp, mobile, name, state, handleLogin, handleLogout, addToCart }}>
             {children}
         </AuthContext.Provider>
     )
