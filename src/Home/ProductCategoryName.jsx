@@ -1,4 +1,5 @@
 import { Flex, HStack, Spacer, Text } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 const Details = [
     {
@@ -41,9 +42,10 @@ const Details = [
 ]
 
 export default function ProductCategoryName() {
+    const navigate = useNavigate()
     return (
         <Flex w="80%" h="60px" margin="auto">
-            {Details.map((item) => <HStack key={item.title} margin="auto" _hover={{
+            {Details.map((item) => <HStack onClick={() => (navigate("/product"))} key={item.title} margin="auto" _hover={{
                 color: "teal.500",
                 cursor: "pointer"
             }}>
