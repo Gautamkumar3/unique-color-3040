@@ -4,6 +4,7 @@ import Login from "../LogIn/Login"
 import Signup from "../Signup/Signup"
 import Signin from "../Signup/Signin"
 import PrivateRoute from "../Components/PrivateRoute"
+import ProductPage from "../Product/ProductPage"
 
 const Allroute = () => {
     return (
@@ -12,6 +13,7 @@ const Allroute = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<PrivateRoute><Signup /></PrivateRoute>} />
             <Route path="/signin" element={<PrivateRoute><Signin /></PrivateRoute>} />
+            <Route path="/product" element={<ProductPage />} />
         </Routes>
 
     )

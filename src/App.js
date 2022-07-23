@@ -8,14 +8,19 @@ import Signup from "./Signup/Signup";
 import Allroute from "./Routes/Allroute";
 import Signin from "./Signup/Signin";
 import Navlow from "./Components/Navlow";
-// import "./Styles/style.css"
+import ProductPage from "./Product/ProductPage";
+import "./Styles/Style.css"
+import CartCard from "./CartPage/CartCard";
+import Cart from "./CartPage/Cart";
 
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Allroute />
+      {/* <Navbar />
+      <Allroute /> */}
+      <CartCard />
+      <Cart />
     </div>
   );
 }
