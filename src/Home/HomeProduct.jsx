@@ -55,7 +55,7 @@ export default function HomeProduct() {
             </Box>
 
             <HStack w="95%" gap="20px" m="auto" marginTop={5}>
-                {Pdata.map((item) => <ProductCard key={item.title} url={item.url} title={item.title} off={item.off} mkt={item.mkt} price={item.price} Fprice={item.Fprice} />)}
+                {Pdata.map((item) => <ProductCard key={item.title} item={item} />)}
             </HStack>
         </div>
     )

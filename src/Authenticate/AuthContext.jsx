@@ -23,7 +23,10 @@ const AuthContextProvider = ({ children }) => {
         l_name: ""
     })
     const [signupData, setSignupData] = useState(sData)
-    const [state, setState] = useState({ isAuth: false })
+    const [state, setState] = useState({ isAuth: false });
+    const [cartCount, setCartCount] = useState(0)
+    const [cartData, setCardData] = useState([]);
+    const [cartQty, setCartQty] = useState(1)
 
 
     //################# signupPage function are here ###############
@@ -76,6 +79,7 @@ const AuthContextProvider = ({ children }) => {
 
 
     const handleOtp = () => {
+
         if (number.length < 10) {
             alert("Please enter valid mobile number")
         } else {
@@ -93,7 +97,7 @@ const AuthContextProvider = ({ children }) => {
                     })
                     if (flag === false) {
                         setMobile(res.data.mob)
-                        setState({ ...state, isAuth: true })
+                        // setState({ ...state, isAuth: true })
                         setTimeout(() => {
                             navigate("/signup")
                         }, 1000)
@@ -101,7 +105,7 @@ const AuthContextProvider = ({ children }) => {
 
                     } else {
                         setMobile(res.data.mob)
-                        setState({ ...state, isAuth: true })
+                        // setState({ ...state, isAuth: true })
                         navigate("/signin")
 
                     }
@@ -116,25 +120,63 @@ const AuthContextProvider = ({ children }) => {
     //   ############### State management for login and logout ################ 
     const handleLogin = () => {
         setSdata({ ...state, isAuth: true })
+
     }
     const handleLogout = () => {
         setSdata({ ...state, isAuth: false })
 
     }
 
+
+
     // ############### Cart function manage ################# 
 
     const addToCart = (item) => {
-        axios.post("https://netmeds-new-api.herokuapp.com/cart", item).then((res) => {
-            // console.log(res)
-        }).then((er) => {
+        axios.post("https://netmeds-new-api.herokuapp.com/cart", { ...item, qty: 1 }).then((res) => {
+            // setCardData(res.data)
+        }).catch((er) => {
             console.log(er)
         })
     }
 
 
+
+    const showDataonCart = () => {
+        axios.get("https://netmeds-new-api.herokuapp.com/cart").then((res) => {
+            setCardData(res.data)
+        })
+    }
+
+    useEffect(() => {
+        showDataonCart();
+        setCartCount(cartData.length)
+    }, [cartData]);
+
+    const deleteCartItem = (id) => {
+        axios.delete(`https://netmeds-new-api.herokuapp.com/cart/${id}`)
+        showDataonCart()
+    }
+
+    const IncreaseCartQty = (id) => {
+        axios.get(`https://netmeds-new-api.herokuapp.com/cart/${id}`).then((res) => {
+
+            res.data.qty += 1;
+            axios.patch(`https://netmeds-new-api.herokuapp.com/cart/${id}`, { qty: res.data.qty })
+        })
+
+    }
+    const DecreaseCartQty = (id) => {
+        axios.get(`https://netmeds-new-api.herokuapp.com/cart/${id}`).then((res) => {
+
+            res.data.qty -= 1;
+            axios.patch(`https://netmeds-new-api.herokuapp.com/cart/${id}`, { qty: res.data.qty })
+        })
+    }
+
+
+
     return (
-        <AuthContext.Provider value={{ pin, handlePin, verifyOtp, handleInput, handleInputMobile, handleOtp, mobile, name, state, handleLogin, handleLogout, addToCart }}>
+        <AuthContext.Provider value={{ pin, handlePin, verifyOtp, handleInput, handleInputMobile, handleOtp, mobile, name, state, handleLogin, handleLogout, addToCart, deleteCartItem, cartData, cartCount, IncreaseCartQty, DecreaseCartQty, cartQty }}>
             {children}
         </AuthContext.Provider>
     )

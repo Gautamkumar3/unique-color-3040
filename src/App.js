@@ -12,15 +12,18 @@ import ProductPage from "./Product/ProductPage";
 import "./Styles/Style.css"
 import CartCard from "./CartPage/CartCard";
 import Cart from "./CartPage/Cart";
+import PaymentDetails from "./Payment/PaymentDetails";
+// import DemoCart from "./Demo/DemoCart";
+
 
 
 function App() {
   return (
     <div className="App">
-      {/* <Navbar />
-      <Allroute /> */}
-      <CartCard />
-      <Cart />
+      <Navbar />
+      <Allroute />
+      {/* <DemoCart /> */}
+
     </div>
   );
 }

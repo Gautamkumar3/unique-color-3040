@@ -1,4 +1,5 @@
 import { Center, HStack, Stack, Text } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import Card from "../Components/Card";
 
 const categData = [
@@ -30,10 +31,13 @@ const categData = [
 ]
 
 export default function ShopByCategory() {
+
+    const navigate = useNavigate()
+
     return (
         <div style={{ marginTop: "30px" }}>
             <Text marginLeft="20px" fontSize='3xl'>Shop By Category</Text>
-            <HStack w="95%" gap="20px" m="auto" marginTop={5}>
+            <HStack w="95%" gap="20px" m="auto" marginTop={5} >
                 {categData.map((item) => <Card key={item.name} url={item.url} name={item.name} />)}
             </HStack>
         </div>
