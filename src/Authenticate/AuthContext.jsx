@@ -98,10 +98,8 @@ const AuthContextProvider = ({ children }) => {
                     if (flag === false) {
                         setMobile(res.data.mob)
                         // setState({ ...state, isAuth: true })
-                        setTimeout(() => {
-                            navigate("/signup")
-                        }, 1000)
 
+                        navigate("/signup")
 
                     } else {
                         setMobile(res.data.mob)

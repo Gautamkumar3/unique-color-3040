@@ -8,7 +8,7 @@ import CartCard from './CartCard';
 
 function Cart() {
 
-    const { cartData, deleteCartItem } = useContext(AuthContext);
+    const { cartData, deleteCartItem, S = "Order Summary" } = useContext(AuthContext);
 
     // const IncreaseCartQty = (id) => {
     //     console.log(id)
@@ -41,7 +41,7 @@ function Cart() {
 
 
             <Box>
-                <Heading marginBottom={10}>Order Summary</Heading>
+                <Heading marginBottom={10}>{S}</Heading>
                 <Text>PRODUCTS</Text>
                 {cartData.length !== 0 ? <Box>
                     {cartData.map((item) => <CartCard key={item.id} data={item} deleteCartItem={deleteCartItem} />)}

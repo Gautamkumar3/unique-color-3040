@@ -1,7 +1,11 @@
 import { Box, Button, Center, Flex, Grid, GridItem, Text } from '@chakra-ui/react'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function PaymentDetails({ price, total }) {
+
+    const navigate = useNavigate()
+
     const Discount = (total - price).toFixed(2)
 
     return (
@@ -28,7 +32,7 @@ function PaymentDetails({ price, total }) {
                 </GridItem>
                 <GridItem rowSpan={2} colSpan={1} paddingTop={1}>
                     <Center>
-                        <Button bg="teal" color="white">PROCEED</Button>
+                        <Button bg="teal" color="white" onClick={() => (navigate("/address"))}>PROCEED</Button>
                     </Center>
 
                 </GridItem>
