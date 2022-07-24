@@ -13,6 +13,7 @@ import "./Styles/Style.css"
 import CartCard from "./CartPage/CartCard";
 import Cart from "./CartPage/Cart";
 import PaymentDetails from "./Payment/PaymentDetails";
+import AddressSlider from "./Address/AddressSlider";
 // import DemoCart from "./Demo/DemoCart";
 
 
@@ -22,7 +23,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Allroute />
-      {/* <DemoCart /> */}
+
 
     </div>
   );

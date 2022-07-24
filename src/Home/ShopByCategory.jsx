@@ -32,7 +32,7 @@ const categData = [
 
 export default function ShopByCategory() {
 
-    const navigate = useNavigate()
+
 
     return (
         <div style={{ marginTop: "30px" }}>

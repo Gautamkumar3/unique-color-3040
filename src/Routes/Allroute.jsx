@@ -6,6 +6,7 @@ import Signin from "../Signup/Signin"
 import PrivateRoute from "../Components/PrivateRoute"
 import ProductPage from "../Product/ProductPage"
 import Cart from "../CartPage/Cart"
+import AddressSlider from "../Address/AddressSlider"
 
 const Allroute = () => {
     return (
@@ -16,6 +17,8 @@ const Allroute = () => {
             <Route path="/cart" element={<Cart />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/signin" element={<Signin />} />
+            <Route path="/address" element={<AddressSlider />} />
+
         </Routes>
 
     )
