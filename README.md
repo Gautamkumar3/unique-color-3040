@@ -1,68 +1,84 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###   website <span>Netmeds Clone<span>
+<h2>Welcome to this repo</h2>
 
-## Available Scripts
+I completed the task in 5 days and Given my
+ best efforts to Construct this project.
+In case of any suggestion and query feel free to connect me.
 
-In the project directory, you can run:
+ <h1>TOOLS AND TECHNOLOGY USED ></h1>
+  <li>HTML</li>
+  <li>css</li>
+<li>javascript</li>  
+<li>font Awesom icons</li>
+<li>Chakra UI</li>
+<li>JSON</li>
+<li>React js</li>
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Project Description
+ 
+ 
+ <h1>About </h1>
+Netmeds.com is one of India’s most trusted pharmacies, dispensing quality medicines at reasonable prices to over 7 million happy customers – PAN India. At netmeds.com, we help you look after your own health effortlessly as well as take care of loved ones wherever they may reside in India. You can buy and send medicines from any corner of the country - with just a few clicks of the mouse.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+### Vercel deploy Link
+ 
+https://netmeds-five.vercel.app/
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Following are the Screenshots for the reference
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Landing Page
+   ![netmeds-five vercel app_](https://user-images.githubusercontent.com/101397735/191342585-bb0c64ce-69e7-4aee-bec4-87de831bc776.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ 
+  - Sign-In Page 
 
-### `npm run eject`
+![netmeds-five vercel app_cart (4)](https://user-images.githubusercontent.com/101397735/191342743-bb11d84b-6670-4295-9f24-6adc33e19113.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+ Signin/Signup Page
+ ![netmeds-clone-alpha vercel app_login](https://user-images.githubusercontent.com/101397735/191343402-a67c62d6-e6ac-4cde-8390-2d9aeb0d5a8f.png)
 
-## Learn More
+ 
+ 
+- Product Page
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![netmeds-clone-alpha vercel app_product (3)](https://user-images.githubusercontent.com/101397735/191343794-02d5b75e-02f9-400c-af73-691dee919afe.png)
+ 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+- Cart-Page
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+![netmeds-five vercel app_cart](https://user-images.githubusercontent.com/101397735/191343892-0200b561-117b-47e0-a99e-617b5c079641.png)
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Checkout Page
+  
+![netmeds-five vercel app_cart (3)](https://user-images.githubusercontent.com/101397735/191344049-785d89d6-207d-4b6b-81bb-0b115b579e94.png)
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
+### About Project
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+> T did this project within 5 days in my construct week.
 
-### `npm run build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+---
+
+------
+
+ 
+<h1>WEBSITE USER FLOW ></h1>
+
+the user flow that we tried to maintain is,
+<br/>
+home -> login/signup -> dashboard -> get started to products -> Add products to cart -> Cart page -> Products Check out page.
