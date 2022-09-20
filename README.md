@@ -69,7 +69,7 @@ https://netmeds-five.vercel.app/
 
 ### About Project
 
-> T did this project within 5 days in my construct week.
+> I did this project within 5 days in my construct week. This is my first React Project.
 
 
 ---
@@ -79,6 +79,6 @@ https://netmeds-five.vercel.app/
  
 <h1>WEBSITE USER FLOW ></h1>
 
-the user flow that we tried to maintain is,
+The user flow that we tried to maintain is,
 <br/>
 home -> login/signup -> dashboard -> get started to products -> Add products to cart -> Cart page -> Products Check out page.
